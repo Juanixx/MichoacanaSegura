@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="myStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@android:color/holo_red_light</item>
+        <item name="android:windowBackground">@color/pinking</item>
+        <item name="android:colorBackground">@color/pinking</item>
+    </style>
+</resources>

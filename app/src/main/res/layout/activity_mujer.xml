@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sesionnI"
+            />
+
+    </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Michoacana Segura"
+            android:textColor="#fff"
+            android:textSize="45dp" />
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        android:layout_marginRight="-45sp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/siluetafinal"
+            android:scaleX="1"
+            android:scaleY="1"
+
+            />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="0.7"
+        android:layout_marginLeft="25sp"
+        android:orientation="vertical">
+
+
+        <ImageButton
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:layout_column="1"
+            android:src="@drawable/mensaje"
+            android:layout_gravity="right"/>
+
+
+        <ImageButton
+            android:id="@+id/btnLupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/lupa" />
+
+
+        <ImageButton
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnCorazon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/corazon"
+            android:layout_gravity="right"
+            />
+
+        <ImageButton
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnSOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/sos"
+            android:layout_gravity="right"/>
+
+
+        <ImageButton
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnGrupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/grupo"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+</LinearLayout>
+
+</TableLayout>

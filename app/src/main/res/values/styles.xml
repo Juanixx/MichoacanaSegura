@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="myStyle" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:windowBackground">@color/pinking</item>
+        <item name="android:colorBackground">@color/pinking</item>
+    </style>
+
+</resources>
