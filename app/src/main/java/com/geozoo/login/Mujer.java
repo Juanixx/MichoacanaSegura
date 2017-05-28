@@ -3,7 +3,6 @@ package com.geozoo.login;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +14,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v4.app.ActivityCompat;
 
 import android.os.Bundle;
 import android.view.View;
@@ -87,11 +85,11 @@ public class Mujer extends Activity implements View.OnClickListener {
 
         switch (view.getId()){
             case R.id.btnMensaje:
-                EnviarMensaje("+524434183099", "Auxilio! Puedo estar en peligro, esta es mi ubicacion actual.");
+                EnviarMensaje("+524434183099", "Auxilio! Puedo estar en peligro, esta es mi ubicacion actual: lat = 19.7308714, lon = -101.187652, Calle Juan José Farfán, Morelia.");
                 break;
 
             case R.id.btnLupa:
-                i=new Intent(this,Login.class);
+                i=new Intent(this,Ubicacion.class);
                 startActivity(i);
                 break;
 

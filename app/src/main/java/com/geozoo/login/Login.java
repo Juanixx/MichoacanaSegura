@@ -34,7 +34,8 @@ public class Login extends Activity implements OnClickListener {
     private Button mSubmit;
     private ProgressDialog pDialog;
     JSONParser jsonParser = new JSONParser();
-    //jala123geozoo.890m.com 169.254.48.125
+    //Aqui iria el link del dominio donde almacenariamos nuesro web service en el host,
+    // pero por problemas de conexion de intenet esto por hoy no fue posible durante el evento HackMorelia 2017.
     private static final String LOGIN_URL = "http://172.20.10.4/mujer/login.php";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";

@@ -31,6 +31,8 @@ public class Registrar extends Activity implements OnClickListener{
     private Button  mRegister;
     private ProgressDialog pDialog;
     JSONParser jsonParser = new JSONParser();
+    //Aqui iria el link del dominio donde almacenariamos nuesro web service en el host,
+    // pero por problemas de conexion de intenet esto por hoy no fue posible durante el evento HackMorelia 2017.
     private static final String REGISTER_URL = "http://172.20.10.4/mujer/register.php";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";

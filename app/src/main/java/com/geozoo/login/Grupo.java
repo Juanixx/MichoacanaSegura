@@ -32,14 +32,11 @@ package com.geozoo.login;
 
 public class Grupo extends Activity{
 
-    private EditText dni;
+
     private EditText nombre;
     private EditText telefono;
     private EditText email;
-    //private Button insertar;
     private Button mostrar;
-    //private Button update;
-    //private Button eliminar;
     private ImageButton mas;
     private ImageButton menos;
     private int posicion=0;
@@ -54,11 +51,9 @@ public class Grupo extends Activity{
         setContentView(R.layout.activity_grupo);
 
         listaPersonas=new ArrayList<Usuarios>();
-        dni=(EditText)findViewById(R.id.dni);
         nombre=(EditText)findViewById(R.id.nombre);
         telefono=(EditText)findViewById(R.id.telefono);
 
-        //Mostramos los datos de la persona por pantalla.
         mostrar=(Button)findViewById(R.id.mostrar);
         mostrar.setOnClickListener(new OnClickListener(){
 
@@ -113,6 +108,9 @@ public class Grupo extends Activity{
 
     private String mostrar(){
         HttpClient httpclient = new DefaultHttpClient();
+
+        //Aqui iria el link del dominio donde almacenariamos nuesro web service en el host,
+        // pero por problemas de conexion de intenet esto por hoy no fue posible durante el evento HackMorelia 2017.
         HttpPost httppost = new HttpPost("http://172.20.10.4/mujer/selectAllJSON.php");
         String resultado="";
         HttpResponse response;
@@ -182,7 +180,6 @@ public class Grupo extends Activity{
                 // TODO Auto-generated method stub
                 Usuarios personas=listaPersonas.get(posicion);
                 nombre.setText(personas.getUsername());
-                dni.setText(personas.getId());
                 //telefono.setText(personas.getPassword());
 
             }
