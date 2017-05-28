@@ -87,7 +87,7 @@ public class Mujer extends Activity implements View.OnClickListener {
 
         switch (view.getId()){
             case R.id.btnMensaje:
-                EnviarMensaje("+524434183099","Auxilio! Puedo estar en peligro, esta es mi ubicacion actual.");
+                EnviarMensaje("+524434183099", "Auxilio! Puedo estar en peligro, esta es mi ubicacion actual.");
                 break;
 
             case R.id.btnLupa:
@@ -101,7 +101,7 @@ public class Mujer extends Activity implements View.OnClickListener {
                 break;
 
             case R.id.btnSOS:
-                llamar("4434183099");
+                llamar("4433766870");
 
                 break;
 

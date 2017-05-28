@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -46,7 +47,6 @@ public class BluetoothActivity extends Activity{
     ListView listaDisp;
     ArrayAdapter mArrayAdapter;
     String messageReceived = "No recibido";
-    Button show;
 
 
     @Override
@@ -57,7 +57,6 @@ public class BluetoothActivity extends Activity{
         listaDisp = (ListView) findViewById(R.id.listaDisp);
         btnBuscarDispositivos = (Button) findViewById(R.id.btnBuscarDispositivos);
         txtViewParaPruebas=(TextView)findViewById(R.id.txtViewParaPruebas);
-        show = (Button)findViewById(R.id.show);
         btnBuscarDispositivos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,12 +69,6 @@ public class BluetoothActivity extends Activity{
             }
         });
 
-        show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtViewParaPruebas.setText(messageReceived);
-            }
-        });
         listaDisp.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -336,6 +329,9 @@ public class BluetoothActivity extends Activity{
                     Log.d(TAG, result);
                     runOnUiThread(new Runnable() {
                         public void run() {
+                            if(Integer.parseInt(enviar.toString().replace(" ", "")) > 90){
+                                EnviarMensaje("+524434183099", "Riesgo de salud de la mujer X");
+                            }
                             txtViewParaPruebas.setText(enviar);
                         }
                     });
@@ -352,8 +348,18 @@ public class BluetoothActivity extends Activity{
         }
     }
 
-    private void SetText(String response){
-        messageReceived = response;
+    private void EnviarMensaje (String Numero, String Mensaje){
+        try {
+            SmsManager sms = SmsManager.getDefault();
+            sms.sendTextMessage(Numero,null,Mensaje,null,null);
+
+            Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
+        }
+
+        catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "Mensaje no enviado, datos incorrectos.", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
     }
 
     public void llenaListaDisp(){
